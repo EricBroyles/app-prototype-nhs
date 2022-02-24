@@ -1,0 +1,48 @@
+To be added/changed
+* Build Dashboard for admin
+* Build Profile: Dispaly hours, request/raise a issue with hours, paid dues, change what you want to tutor in, chnage/set your availability, set contact info, change notification options
+* make datagrid its own component that recieves the neccisary props and can be called multiple times
+
+
+
+Low Priority Changes
+* change Icons to add some space between them and the text
+* in navigation - make just one nav bar that gets passed the neccisary props so it can work for a member account, the landing pages, and an admin account, also make the neccisary changes in Drawer so you can just have one drawer
+* snackbars to be added: inform the user of an action being completed
+* add loading dials when logining in/signup
+* fix anouncmenttag to close permanently on all pages it exists when click close
+
+
+------------Important Resources------------
+https://ui.dev/react-router-tutorial/
+https://www.freakyjolly.com/react-material-ui-datepicker-and-timepicker-tutorial/#Install_Material_UI_and_Other_Packages //date picker
+* https://mui.com/components/data-grid/selection/, good examples of ways to implement sorting features into datGrid and stuff
+
+-------------------SetUp-------------------
+Installed Items:
+- MUI
+    * npm install @material-ui/core
+    * npm install @material-ui/icons
+    * npm install @mui/icons-material
+    * npm install @mui/lab
+    * npm install @material-ui/pickers
+    * npm install date-fns @date-io/date-fns@1
+    * npm install @mui/x-data-grid
+    
+    * X npm install @mui/styles -> uninstalled 
+    * X npm install @date-io/date-fns -> uninstalled
+    * X npm install @mui/lab -> uninstalled 
+    * X npm i @date-io/date-fns@1.x date-fns -> uninstalled
+- React Router
+    * npm install react-router-dom
+
+Removed Items
+-App.test.js
+-Logo.svg
+-reportWebVitals.js
+-setupTests.js
+
+--Remove all mentions of these in index.js
+-All inital styles in App.cc
+
+

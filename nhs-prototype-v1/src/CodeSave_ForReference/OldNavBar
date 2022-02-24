@@ -1,0 +1,98 @@
+//NOTE: This code is not up to date, some issues is route path of /login-signup has changed to /login
+
+
+/*
+import * as React from 'react';
+import '../App.css';
+//React Router Imports
+import {Link,} from 'react-router-dom'
+//MUI Imports
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
+//MUI Icon Imports
+import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+import HelpIcon from '@mui/icons-material/Help';
+import LoginIcon from '@mui/icons-material/Login';
+import VolunteerIcon from '@mui/icons-material/VolunteerActivism';
+import PersonIcon from '@mui/icons-material/Person';
+
+const NavBar = () => {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return(
+        <div className="NavBar">
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+              >
+                <MenuIcon />
+              </IconButton> 
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  'aria-labelledby': 'basic-button',
+                }}
+              >
+                <MenuItem onClick={handleClose} component={Link} to="/">
+                  <HomeIcon/> Home
+                </MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/help">
+                  <HelpIcon/>Help
+                </MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/get-volunteers">
+                  <VolunteerIcon/>Get Volunteers
+                </MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/get-tutor">
+                  <PersonIcon/>Get a Tutor
+                </MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/login-signup">
+                  <LoginIcon/>Login/Signup
+                </MenuItem>
+              </Menu>
+
+              <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: "white", fontWeight: "bold"}}>
+                HSE National Honor Society
+              </Typography>
+
+              <Button color="inherit" component={Link} to="/login-signup">Login<LoginIcon/></Button>
+            </Toolbar>
+          </AppBar>
+        </Box>
+      </div>
+    )
+}
+
+export default NavBar
+
+*/

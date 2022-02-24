@@ -1,0 +1,89 @@
+import * as React from 'react';
+
+import NavBar from "../components/navigation/NavBar"
+import Footer from "../components/Footer"
+import LandingCard from '../components/Cards/LandingCard'
+//React Router Imports
+import {Link,} from 'react-router-dom'
+//MUI Imports
+import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
+import Paper from '@mui/material/Paper';
+import Divider from '@mui/material/Divider';
+import MenuList from '@mui/material/MenuList';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography'
+//Icons
+import Check from '@mui/icons-material/Check';
+
+
+//NOTE: image link is not "../../public/img/laptop-coffee.jpeg"
+//but rather "/img/laptop-coffee.jpeg"
+
+const home = () => {
+    return(
+        <div className= "pages-home">
+            <NavBar/>
+            <Alert sx={{mt: 8}} severity='info' >
+                <Button component={Link} to="/login">
+                Join NHS
+                </Button>
+            </Alert>
+            <Box p={5}>
+                <Grid container spacing={5}>
+                    <Grid item> 
+                      <LandingCard 
+                        image= "/img/laptop-coffee.jpeg"
+                        title="Sponsor an Event" 
+                        btnText= "Get NHS Volunteers" 
+                        mainText="here is some main text" 
+                        contacts="@emil" 
+                        route="/get-volunteers"
+                    />
+                    </Grid>
+                    <Grid item> 
+                      <LandingCard 
+                        image= "/img/laptop-coffee.jpeg"
+                        title="Need A Tutor?" 
+                        btnText= "Get an NHS tutor" 
+                        mainText="here is some main text" 
+                        contacts="@emil" 
+                        route="/get-tutor"
+                    />
+                    </Grid>
+                    <Grid item>
+                        <Paper sx={{ width: 320 }}>
+                            <Box p={2}>
+                                <Typography variant="h6">
+                                    Events
+                                </Typography>
+                                
+                                <Divider/>
+                                <Typography>
+                                    Upcoming Event 
+                                    <Button>
+                                        Visit
+                                    </Button>
+                                </Typography>
+                                <Typography>
+                                    Recent Event 
+                                    <Button>
+                                        Visit
+                                    </Button>
+                                </Typography>
+                            </Box>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Box>
+
+            <Footer/>
+        </div>
+    )
+}
+
+export default home
