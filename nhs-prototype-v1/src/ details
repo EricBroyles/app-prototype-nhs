@@ -12,7 +12,9 @@ Low Priority Changes
 * snackbars to be added: inform the user of an action being completed
 * add loading dials when logining in/signup
 * fix anouncmenttag to close permanently on all pages it exists when click close
-
+GitHub Info
+* commit changes
+* then push to see the change
 
 ------------Important Resources------------
 https://ui.dev/react-router-tutorial/
