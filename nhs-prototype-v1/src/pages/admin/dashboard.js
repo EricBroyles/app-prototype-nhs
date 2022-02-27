@@ -5,6 +5,7 @@ import MemberIssueCard from '../../components/Cards/ToDoCards/MemberIssueCard';
 import ApplicationCard from '../../components/Cards/ToDoCards/ApplicationCard'
 import HoursCard from '../../components/Cards/ToDoCards/HoursCard'
 import FastFactsCard from '../../components/Cards/FastFactsCard';
+import ControlApplicationCards from '../../components/Cards/ControlApplicationsCard';
 //MUI Imports
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography'
@@ -47,7 +48,7 @@ const Dashboard = () => {
     return(
     <div className = "dashboard">
       <AdminNavBar/>
-      <Grid container spacing={10}>
+      <Grid container spacing={5}>
         <Grid item>
         <Typography variant="h4" mt={10} ml={2}>To Do</Typography>
         <Paper elevation={4}sx={{minHeight: 600, maxWidth: 900, m: 1}}>
@@ -78,11 +79,10 @@ const Dashboard = () => {
           </TabPanel>
         </Paper>          
         </Grid>
-        <Grid item mt={10}>
-          <Paper elevation={4} sx={{minHeight: 500, maxWidth: 500, m:1}}>
+        <Grid item >
+            <Typography variant="h4" mt={10} ml={2}>Key Controls</Typography>
             <FastFactsCard/>
-            
-          </Paper>
+            <ControlApplicationCards />
         </Grid>
       </Grid>
       

@@ -17,6 +17,7 @@ GitHub Info
 * then push to see the change
 
 ------------Important Resources------------
+https://www.prisma.io/dataguide/postgresql/authentication-and-authorization/configuring-user-authentication#:~:text=0.1%20as%20the%20host%2C%20PostgreSQL,use%20the%20host%20connection%20type.
 https://ui.dev/react-router-tutorial/
 https://www.freakyjolly.com/react-material-ui-datepicker-and-timepicker-tutorial/#Install_Material_UI_and_Other_Packages //date picker
 * https://mui.com/components/data-grid/selection/, good examples of ways to implement sorting features into datGrid and stuff
