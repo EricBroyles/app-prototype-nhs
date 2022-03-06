@@ -1,9 +1,5 @@
 To be added/changed
-* Change 
-* Build Dashboard for admin
-* Build Profile: Dispaly hours, request/raise a issue with hours, paid dues, change what you want to tutor in, chnage/set your availability, set contact info, change notification options
-* make datagrid its own component that recieves the neccisary props and can be called multiple times
-
+* Add the ability for a member to see/ review their submiited applications in Profile
 
 
 Low Priority Changes
