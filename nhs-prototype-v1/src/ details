@@ -1,6 +1,7 @@
 To be added/changed
 * Add the ability for a member to see/ review their submiited applications in Profile
 
+Change test
 
 Low Priority Changes
 * change Icons to add some space between them and the text
@@ -19,6 +20,7 @@ https://www.freakyjolly.com/react-material-ui-datepicker-and-timepicker-tutorial
 * https://mui.com/components/data-grid/selection/, good examples of ways to implement sorting features into datGrid and stuff
 
 -------------------SetUp-------------------
+npm i @mui/icons-material @mui/lab @material-ui/pickers date-fns @date-io/date-fns@1 @mui/x-data-grid  react-router-dom
 Installed Items:
 - MUI
     * npm install @material-ui/core
