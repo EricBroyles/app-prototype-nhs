@@ -1,7 +1,6 @@
 To be added/changed
 * Add the ability for a member to see/ review their submiited applications in Profile
-
-
+* I did a thing
 Low Priority Changes
 * change Icons to add some space between them and the text
 * in navigation - make just one nav bar that gets passed the neccisary props so it can work for a member account, the landing pages, and an admin account, also make the neccisary changes in Drawer so you can just have one drawer
