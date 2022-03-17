@@ -16,6 +16,7 @@ import AdminAnnouncements from './pages/admin/adminAnnouncements';
 import People from './pages/admin/people';
 import Dashboard from './pages/admin/dashboard';
 import Build from './pages/admin/build'
+import AddVo from './pages/admin/addVo'
 
 //React Router Imports
 import {BrowserRouter,Routes,Route,} from 'react-router-dom'
@@ -51,6 +52,7 @@ function App() {
         <Route path="/admin/people" element={<People/>}/>
         <Route path="/admin/announcements" element={<AdminAnnouncements/>}/>
         <Route path="/admin/build" element={<Build/>}/>
+        <Route path="/admin/addVo" element={<AddVo/>}/>
       </Routes>
     </BrowserRouter>
   );
