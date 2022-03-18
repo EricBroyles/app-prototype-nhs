@@ -43,7 +43,8 @@ const ListVos= ()=>{
         <th>Title</th>
         <th>Description</th>
         <th>Date</th>
-        <th>Time</th>
+        <th>Start Time</th>
+        <th>End Time</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
@@ -59,7 +60,8 @@ const ListVos= ()=>{
                 <td>{vo.title}</td>
                 <td>{vo.description}</td>
                 <td>{vo.date}</td>
-                <td>{vo.time}</td>
+                <td>{vo.starttime}</td>
+                <td>{vo.endtime}</td>
                 <td><EditVo vo={vo}/></td>
                 <td><button className="btn btn-danger" onClick={()=> deleteVo(vo.vo_id)}>Delete</button></td>
             </tr>
