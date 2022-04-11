@@ -14,8 +14,7 @@ import Button from '@mui/material/Button'
 import CardMedia from '@mui/material/CardMedia'
 //MUI Icons Imports
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+
 
 
 const Root = styled('div')(({ theme }) => ({

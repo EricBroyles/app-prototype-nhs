@@ -9,7 +9,6 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button'
 
 
 //MUI Icons Imports
@@ -45,11 +44,6 @@ const ExpandMore = styled((props) => {
 
 export default function ControlApplicationsCards(){
     
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
-    const handleListItemClick = (event, index) => {
-        setSelectedIndex(index);
-    };
-
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded)
