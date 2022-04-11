@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import NavBar from "../components/navigation/NavBar"
-import Footer from "../components/Footer"
+import Footer from "../components/navigation/Footer"
 import LandingCard from '../components/Cards/LandingCard'
 //React Router Imports
 import {Link,} from 'react-router-dom'
@@ -12,13 +12,8 @@ import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
-import MenuList from '@mui/material/MenuList';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography'
-//Icons
-import Check from '@mui/icons-material/Check';
+
 
 
 //NOTE: image link is not "../../public/img/laptop-coffee.jpeg"

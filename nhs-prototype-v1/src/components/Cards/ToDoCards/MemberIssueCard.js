@@ -15,10 +15,6 @@ export default function MemberIssueCard(){
         setNewTagDisplay('none')
       }
     }
-    const [expanded, setExpanded] = React.useState(false);
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
     
     return(
         <Card elevation={5} onClick = {handleNewTagDisplay} sx={{ padding: 2, marginBottom: 2}}>

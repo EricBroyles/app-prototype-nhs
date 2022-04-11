@@ -2,9 +2,7 @@ import * as React from 'react';
 //MUI Imports
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
