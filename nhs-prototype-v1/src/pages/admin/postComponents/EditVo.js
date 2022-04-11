@@ -4,15 +4,15 @@ const EditVo= ({vo}) =>{
     const[title, setTitle]=useState(vo.title); 
     const[description, setDescription]=useState(vo.description);   
     const[date, setDate]=useState(vo.date);   
-    const[starttime, setsTime]=useState(vo.starttime);  
-    const[endtime, seteTime]=useState(vo.endtime);     
+    const[starttime, setsTime]=useState(vo.time);  
+       
     
 
     //description function
 const updateDescription=async(e)=>{
     e.preventDefault();
     try {
-        const body={title, description, date, starttime, endtime}
+        const body={title, description, date, starttime}
         const response= await fetch(`http://localhost:5000/vo/${vo.vo_id}`,{
             method: "PUT",
             headers: {"Content-Type": "application/json"},
@@ -56,7 +56,6 @@ const updateDescription=async(e)=>{
         <input type="text" className="formControl" value={description} onChange={e => setDescription(e.target.value)}></input>
         <input type="text" className="formControl" value={date} onChange={e => setDate(e.target.value)}></input>
         <input type="text" className="formControl" value={starttime} onChange={e => setsTime(e.target.value)}></input>
-        <input type="text" className="formControl" value={endtime} onChange={e => seteTime(e.target.value)}></input>
       </div>
 
       

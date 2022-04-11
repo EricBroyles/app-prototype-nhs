@@ -14,8 +14,8 @@ const Events = () => {
             <Paper elevation={4} sx={{minHeight: 600, maxWidth: 900, m: 1, p: 4 }}>
                 <EventSignUpCard   
                     table={[
-                        {beginTime: "9 am", endTime: "10 am", date: "02/02/2222", location: "HSE hs", spots: 4},
-                        {beginTime: "10 am", endTime: "11 am", date: "02/02/2222", location: "HSE hs", spots: 4},
+                            {beginTime: "9 am", endTime: "10 am", date: "02/02/2222", location: "HSE hs", spots: 4},
+                            {beginTime: "10 am", endTime: "11 am", date: "02/02/2222", location: "HSE hs", spots: 4},
                         {beginTime: "11 am", endTime: "12 pm", date: "02/02/2222", location: "HSE hs", spots: 4},
                     ]}
                     title="Title of Event"
