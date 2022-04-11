@@ -1,12 +1,8 @@
 To be added/changed
+* Switch email to mailgun thing
 * Add the ability for a member to see/ review their submiited applications in Profile
-<<<<<<< HEAD:nhs-prototype-v1/src/ details
+* disable buttons when loading, add cancel btns
 
-Change test
-
-=======
-* I did a thing
->>>>>>> d17607ee0db0a06a3dda0c99ffa12a01efed50ee:nhs-prototype-v1/src/details
 Low Priority Changes
 * change Icons to add some space between them and the text
 * in navigation - make just one nav bar that gets passed the neccisary props so it can work for a member account, the landing pages, and an admin account, also make the neccisary changes in Drawer so you can just have one drawer
@@ -22,13 +18,15 @@ https://www.prisma.io/dataguide/postgresql/authentication-and-authorization/conf
 https://ui.dev/react-router-tutorial/
 https://www.freakyjolly.com/react-material-ui-datepicker-and-timepicker-tutorial/#Install_Material_UI_and_Other_Packages //date picker
 * https://mui.com/components/data-grid/selection/, good examples of ways to implement sorting features into datGrid and stuff
+NodeMailer Tutorial on how to send emails
+* https://dev.to/jlong4223/how-to-implement-email-functionality-with-node-js-react-js-nodemailer-and-oauth2-2h7m
+AUth
+* https://www.bezkoder.com/react-express-authentication-jwt/
 
 -------------------SetUp-------------------
-<<<<<<< HEAD:nhs-prototype-v1/src/ details
-npm i @mui/icons-material @mui/lab @material-ui/pickers date-fns @date-io/date-fns@1 @mui/x-data-grid  react-router-dom
-=======
-Hello
->>>>>>> d17607ee0db0a06a3dda0c99ffa12a01efed50ee:nhs-prototype-v1/src/details
+Using npm install randomstring
+npm install jsonwebtoken
+npm install bcrypt cookie-parser jsonwebtoken
 Installed Items:
 - MUI
     * npm install @material-ui/core

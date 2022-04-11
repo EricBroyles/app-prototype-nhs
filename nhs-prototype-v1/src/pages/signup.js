@@ -17,6 +17,12 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import FormLabel from '@mui/material/FormLabel';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+
+
 //MUI Picker Imports
 import {MuiPickersUtilsProvider,KeyboardDatePicker} from '@material-ui/pickers';
 import 'date-fns';
@@ -24,31 +30,45 @@ import DateFnsUtils from '@date-io/date-fns';
 //MUI Icons
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import CloseIcon from '@mui/icons-material/Close';
+import { intlFormat } from 'date-fns';
 
 
 const theme = createTheme();
 
 const Signup = () => {
 
+  const [data, setData] = React.useState({
+    type: "",
+    first_name: "",
+    last_name: "",
+    paid_dues: false,
+    grade_level: "",
+    student_id: null,
+    birth_date: "",
+    email: "",
+    phone: "",
+    password: '',
+  })
+  React.useEffect(() => {
+    console.log(data)
+  }, [data])
+  
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
+        const info = new FormData(event.currentTarget);
+        setData({...data,first_name: info.get('firstName'), last_name: info.get('lastName'), email: info.get('email') })
         console.log({
-          email: data.get('email'),
-          password: data.get('password'),
+          email: info.get('email'),
+          password: info.get('password'),
         });
       };
 
     const [selectedDate, setSelectedDate] = useState(new Date());
     const handleDateChange = (date) => {
         setSelectedDate(date);
+        setData({...data, birth_date: date.toDateString()})
     };
 
-    const [schoolYear, setSchoolYear] = React.useState('');
-    const handleChange = (event) => {
-        setSchoolYear(event.target.value);
-    };
-    
       return (
         <ThemeProvider theme={theme}>
           <Container component="main" maxWidth="xs">
@@ -67,6 +87,28 @@ const Signup = () => {
               <Typography component="h1" variant="h5">
                 Sign up
               </Typography>
+
+              <Box sx={{ display: 'flex' }}>
+              <FormControl>
+                <FormLabel id="radio-buttons-group">I am a...</FormLabel>
+                <RadioGroup
+                  aria-labelledby="radio-buttons-group"
+                  name="radio-buttons-group"
+                  value={data.type}
+                  onChange={(event) => setData({...data, type: event.target.value})}
+                >
+                  <FormControlLabel value="nhsMember" control={<Radio />} label="NHS Member" />
+                  <FormControlLabel value="student" control={<Radio />} label="Student" />
+                  <FormControlLabel value="parent" control={<Radio />} label="Parent" />
+                  <FormControlLabel value="teacher" control={<Radio />} label="Teacher" />
+                  <FormControlLabel value="eventSponsor" control={<Radio />} label="Event Sponsor" />
+                  
+                </RadioGroup>
+              </FormControl>
+              </Box>
+
+
+
               <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
@@ -118,9 +160,9 @@ const Signup = () => {
                                 <Select
                                 labelId="select-label"
                                 id="select"
-                                value={schoolYear}
+                                value={data.grade_level}
                                 label="School Year"
-                                onChange={handleChange}
+                                onChange={(event) => setData({...data, grade_level: event.target.value})}
                                 >
                                 <MenuItem value="Freshman">Freshman</MenuItem>
                                 <MenuItem value="Sophomore">Sophomore</MenuItem>
