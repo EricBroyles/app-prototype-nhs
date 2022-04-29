@@ -6,7 +6,7 @@ const EditVo= ({vo}) =>{
     const[date, setDate]=useState(vo.date);   
     const[starttime, setsTime]=useState(vo.time);  
        
-    
+
 
     //description function
 const updateDescription=async(e)=>{

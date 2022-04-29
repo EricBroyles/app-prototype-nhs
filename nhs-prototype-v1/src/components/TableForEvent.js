@@ -1,4 +1,6 @@
+
 import * as React from 'react';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,9 +9,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
+import SignUp from './signUp';
+
 
 //table: [{beginTime, endTime, date, location, spots}]
-export default function TableForEvent({table}) {
+export default function TableForEvent({table,event}) {
     const rows = table
 
     return (
@@ -35,9 +39,9 @@ export default function TableForEvent({table}) {
               <TableCell align="right">{row.date}</TableCell>
               <TableCell align="right">{row.location}</TableCell>
               <TableCell align="right">{row.spots}</TableCell>
-              <TableCell align="right">
-                  <Button>Sign Up</Button>
-              </TableCell>
+              <TableCell align="right">  
+              <SignUp event={event}/>
+              </TableCell>  
             </TableRow>
             
           ))}
