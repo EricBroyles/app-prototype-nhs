@@ -122,7 +122,7 @@ app.post("/vo", async(req,res)=>{
             "Insert INTO vo (title,description, date, starttime, endtime) VALUES($1,$2, $3, $4, $5) RETURNING *",  
             [title, description, date, starttime, endtime]);
        
-            res.json(newVo).rows[0];
+            res.json(newVo);
 
     } catch (err){
         console.error(err.message); 
@@ -134,7 +134,7 @@ app.get("/vo", async (req, res)=>{
     try{
         const allVos=await pool.query("SELECT * FROM vo");
         res.json(allVos.rows);
-    }catch{
+    }catch(err){
         console.error(err.message)
     }
 });
@@ -173,7 +173,7 @@ app.delete("/vo/:id", async (req, res)=>{
         const deleteVo=await pool.query("DELETE FROM vo WHERE vo_id = $1",
         [id]);
         res.json("Vo was deleted");
-    }catch{
+    }catch(err){
         console.error(err.message)
     }
 });
@@ -194,7 +194,7 @@ app.post("/test", async(req,res)=>{
             "Insert INTO test (time) VALUES(ARRAY[$1]) RETURNING *",  
             [time]);
        
-            res.json(newTest).rows[0];
+            res.json(newTest);
 
     } catch (err){
         console.error(err.message); 

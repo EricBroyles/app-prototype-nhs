@@ -29,7 +29,7 @@ const ExpandMore = styled((props) => {
   }));
 //table: [{beginTime, endTime, date, location, spots}]
 //contacts {email, phone}
-export default function EventSignUpCard({table, title, sponsor, description, contacts}){
+export default function EventSignUpCard({table, title, sponsor, description, contacts, event}){
     const[newTagDisplay, setNewTagDisplay] = React.useState('display')
     const handleNewTagDisplay = () => {
       if(newTagDisplay === 'display'){
@@ -65,7 +65,7 @@ export default function EventSignUpCard({table, title, sponsor, description, con
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <TableForEvent table={table}/>
+              <TableForEvent table={table} event={event}/>
             </CardContent>
           </Collapse>
           <Typography variant="b1">Questions? {contacts.email} or {contacts.phone}</Typography>
